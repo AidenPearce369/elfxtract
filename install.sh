@@ -17,5 +17,4 @@ else
     r2pm update
     r2pm -ci r2ghidra
 fi
-pip install -r requirements.txt
 echo "SUCCESS !!"
