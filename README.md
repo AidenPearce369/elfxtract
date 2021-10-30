@@ -30,6 +30,7 @@ git clone https://github.com/AidenPearce369/elfxtract
 cd elfxtract
 chmod +x install.sh
 ./install.sh
+pip install -r requirements.txt
 ```
 
 ### Working
