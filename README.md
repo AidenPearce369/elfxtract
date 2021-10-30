@@ -2,7 +2,7 @@
 
 **ELFXtract** is an automated analysis tool used for enumerating ELF binaries
 
-Powered by [Radare2](https://github.com/radareorg/radare2 and [r2ghidra](https://github.com/radareorg/r2ghidra)
+Powered by [Radare2](https://github.com/radareorg/radare2) and [r2ghidra](https://github.com/radareorg/r2ghidra)
 
 This is specially developed for PWN challenges and it has many automated features
 
