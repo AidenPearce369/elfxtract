@@ -1,0 +1,5 @@
+pwn==1.0
+pwnlib==1.2.1
+pwntools==4.6.0
+r2pipe==0.9.7
+termcolor==1.1.0
