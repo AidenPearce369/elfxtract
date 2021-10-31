@@ -1,0 +1,2 @@
+Check magic byte of ELF
+Display specific function
