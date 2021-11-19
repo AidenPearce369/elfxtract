@@ -313,7 +313,8 @@ ra@ubuntu:~/elfxtract$ python3 main.py -h
                         @aidenpearce369                                                                  
         
 ***************************************************************************
-usage: main.py [-h] -f FILE [-a] [-i] [-g] [--user-func] [--asm-only] [--decompiled-only] [-t]
+usage: main.py [-h] -f FILE [-a] [-i] [-g] [--user-func] [--get-func GET_FUNC] [--asm-only]
+               [--decompiled-only] [-t]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -322,6 +323,7 @@ optional arguments:
   -i, --info            Displays basic info
   -g, --gadgets         Displays gadgets
   --user-func           Displays the details of user defined functions
+  --get-func GET_FUNC   Displays the ASM & decompiled code of the given function
   --asm-only            Displays the ASM of ELF
   --decompiled-only     Displays the decompiled C code of ELF
   -t, --tables          Displays PLT, GOT & Function table

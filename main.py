@@ -83,6 +83,16 @@ def onlyasm(filename,time_val):
     funcs=defined_func(filename)
     asm_func(filename,funcs,time_val)
 
+def specificfunction(fname,filename,time_val):
+    funcs=defined_func(filename)
+    if fname in funcs:
+        asm_func(filename,funcs,time_val)
+        decompile_func(filename,funcs,time_val)
+    else:
+        print("Could not find the given function")
+        print("Available functions are "+str(funcs))
+        exit()
+
 if __name__ == "__main__":
     banner()
     check_imports()
@@ -92,6 +102,7 @@ if __name__ == "__main__":
     parser.add_argument("-i","--info",help="Displays basic info",action="store_true")
     parser.add_argument("-g","--gadgets",help="Displays gadgets",action="store_true")
     parser.add_argument("--user-func",help="Displays the details of user defined functions",action="store_true")
+    parser.add_argument("--get-func",help="Displays the ASM & decompiled code of the given function")
     parser.add_argument("--asm-only",help="Displays the ASM of ELF",action="store_true")
     parser.add_argument("--decompiled-only",help="Displays the decompiled C code of ELF",action="store_true")
     parser.add_argument("-t","--tables",help="Displays PLT, GOT & Function table",action="store_true")
@@ -111,6 +122,8 @@ if __name__ == "__main__":
         tablecheck(args.file)
     if((args.all)==False and (args.user_func)==True):
         functioncheck(args.file,5)
+    if((args.all)==False and (args.get_func)!=None):
+        specificfunction(args.get_func,args.file,5)
     if((args.all)==False and (args.decompiled_only)==True):
         onlydecompile(args.file,5)
     if((args.all)==False and (args.asm_only)==True):
